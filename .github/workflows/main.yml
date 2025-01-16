@@ -1,8 +1,8 @@
 name: CD
 
-on: 
+on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
@@ -12,11 +12,11 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Deploy using ssh
-        uses: appleboy/ssh-actions@master
+        uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.PRIVATE_KEY }}
+          key: ${{ secrets.KEY }}
           port: 22
           script: |
             cd /home/ubuntu/testapp/learn-ci-cd
