@@ -11,7 +11,7 @@ it("Call the /youtube endpoint", async (done) => {
 it("Call the / endpoint", async (done) => {
   const res = await request.get("/");
   expect(res.status).toBe(200);
-  expect(res.text).toBe("This App is running properly!");
+  expect(res.text).toBe("This App is running properly Awesome!");
   done();
 });
 it("Call the /pong endpoint", async (done) => {
